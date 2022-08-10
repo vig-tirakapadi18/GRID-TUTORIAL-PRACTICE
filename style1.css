@@ -1,0 +1,47 @@
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+background-color: #ffeead;
+margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+
+
+/* GRID ALL CODE  */
+/* .container {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 100px auto 200px;
+  grid-gap: 3px;
+} */
+.container {
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: 100px 100px; */
+  /* grid-template-rows: repeat(2, 100px); */
+  grid-template: repeat(2, 100px) / repeat(3, 1fr);
+  /* grid-template: ROW / COLUMN; */
+  grid-gap: 5px;
+}
